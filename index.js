@@ -13,7 +13,7 @@ app.get('/', async (req, res) => {
     res.status(200).json({
         status: 'success',
         data: {
-          name: 'Invoice sender',
+          name: 'Letter remover',
           version: '1.0'
         }
       });
