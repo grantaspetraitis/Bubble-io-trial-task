@@ -9,8 +9,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.post('/', user.generateText);
-app.get('/', (req, res) => {
-    res.status(200).send({ msg: 'Welcome to the API' });
+app.get('/', async (req, res) => {
+    res.status(200).json({
+        status: 'success',
+        data: {
+          name: 'Invoice sender',
+          version: '1.0'
+        }
+      });
 })
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
