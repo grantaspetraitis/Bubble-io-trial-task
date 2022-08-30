@@ -10,13 +10,13 @@ app.use(express.urlencoded({ extended: false }));
 
 
 app.get('/', async (req, res) => {
-    res.status(200).json({
-        status: 'success',
-        data: {
-          name: 'Letter remover',
-          version: '1.0'
-        }
-      });
+  res.status(200).json({
+    status: 'success',
+    data: {
+      name: 'Letter remover',
+      version: '1.0'
+    }
+  });
 })
 app.post('/', user.generateText);
 

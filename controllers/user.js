@@ -2,6 +2,9 @@ exports.generateText = async (req, res) => {
     const text = req.body.text;
     const omittedLetter = req.body.omittedLetter;
 
+    console.log('aaa');
+    return;
+
     if (isNaN(text) && isNaN(omittedLetter)) {
 
         const generatedText = text.replace(omittedLetter, '');
